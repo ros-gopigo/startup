@@ -1,0 +1,10 @@
+[Unit]
+Description=ROS Master
+Wants=network.target
+
+[Service]
+User=pi
+ExecStart=/bin/bash -a -c 'source /opt/ros/jade/setup.bash && exec /opt/ros/jade/bin/roscore'
+
+[Install]
+WantedBy=multi-user.target
